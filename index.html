@@ -14,7 +14,235 @@
 
         body {
             min-height: 100vh;
+            display: flex;<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BADSHAH BROKING</title>
+    <!-- Premium Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Ultra-premium dark background with trading grid glow */
+            background: 
+                radial-gradient(circle at 50% 10%, rgba(0, 255, 136, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(0, 114, 255, 0.15), transparent 40%),
+                linear-gradient(rgba(8, 15, 23, 0.88), rgba(8, 15, 23, 0.95)),
+                url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Card Animation & Glassmorphism */
+        .card {
+            background: rgba(18, 26, 36, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 24px;
+            padding: 35px 25px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+                        inset 0 0 15px rgba(255, 255, 255, 0.03);
+            animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Profile Image Container for fallback & ring glow */
+        .profile-container {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #00ff88, #0072ff);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            background-color: #1a2332; /* Image nahi milne par blank space nahi dikhega */
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #D1D5DB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: #9CA3AF;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        /* Feature List */
+        .features {
+            text-align: left;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-item {
+            font-size: 13px;
+            color: #E5E7EB;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            color: #00ff88;
+            font-weight: 800;
+            margin-right: 12px;
+            background: rgba(0, 255, 136, 0.15);
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 11px;
+        }
+
+        /* Animated CTA Button */
+        .btn-telegram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            background: linear-gradient(90deg, #00ff88, #0072ff);
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.35);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.6);
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(0, 255, 136, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0);
+            }
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 10px;
+            color: #6B7280;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        /* Footer Tag */
+        .footer-tag {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #9CA3AF;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-tag a {
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="profile-container">
+            <img src="Badshah.png" alt="Badshah Broking" class="profile-img">
+        </div>
+        
+        <h1 class="title">BADSHAH BROKING OFFICIAL</h1>
+        
+        <p class="subtitle">Get market updates, potential trades, and expert analysis straight to your phone — absolutely free.</p>
+        
+        <div class="features">
+            <div class="feature-item">Daily Nifty & BankNifty Levels</div>
+            <div class="feature-item">No Paid Tips - Purely Educational</div>
+            <div class="feature-item">5+ Years of Market Experience</div>
+            <div class="feature-item">50000+ Subscribers Trust Us Already</div>
+        </div>
+
+        <a href="https://t.me/+OkerQQi6GOA3NWI1" class="btn-telegram" target="_blank">JOIN FREE TELEGRAM</a>
+
+        <p class="disclaimer">
+            Disclaimer: This channel is for educational and informational purposes only. We do not provide investment advice or guaranteed returns. Trading in the stock market involves risk. Please consult your financial advisor before making any investment decisions.
+        </p>
+
+        <div class="footer-tag">
+            This Channel Advertise By <a href="https://t.me/+JP96Y2n0U8xiZWI1" target="_blank">Digital ads Experts ↗</a>
+        </div>
+    </div>
+
+</body>
+</html>
             justify-content: center;
             align-items: center;
             background: linear-gradient(rgba(10, 25, 30, 0.85), rgba(10, 25, 30, 0.85)),
@@ -161,7 +389,7 @@
     <div class="card">
         <img src="Badshah.png" alt="Profile" class="profile-img">
         
-        <h1 class="title">BADSHAH BROKING</h1>
+        <h1 class="title">BADSHAH BROKING OFFICIAL</h1>
         
         <p class="subtitle">Get market updates, potential trades, and expert analysis straight to your phone — absolutely free.</p>
         
