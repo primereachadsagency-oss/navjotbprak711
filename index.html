@@ -75,7 +75,7 @@
             border-radius: 50%;
             object-fit: cover;
             display: block;
-            background-color: #1a2332; /* Image nahi milne par blank space nahi dikhega */
+            background-color: #1a2332;
         }
 
         .title {
@@ -151,6 +151,7 @@
             box-shadow: 0 4px 20px rgba(0, 255, 136, 0.35);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             animation: pulseGlow 2.5s infinite;
+            cursor: pointer;
         }
 
         .btn-telegram:hover {
@@ -196,24 +197,24 @@
         }
     </style>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1031170686369850');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1031170686369850&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1031170686369850');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1031170686369850&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
 </head>
 <body>
 
@@ -233,7 +234,7 @@ src="https://www.facebook.com/tr?id=1031170686369850&ev=PageView&noscript=1"
             <div class="feature-item">50000+ Subscribers Trust Us Already</div>
         </div>
 
-        <a href="https://t.me/+pRHuBORwgsQzMDFl" class="btn-telegram" target="_blank">JOIN FREE TELEGRAM</a>
+        <a href="https://t.me/+pRHuBORwgsQzMDFl" id="telegramBtn" class="btn-telegram" target="_blank">JOIN FREE TELEGRAM</a>
 
         <p class="disclaimer">
             Disclaimer: This channel is for educational and informational purposes only. We do not provide investment advice or guaranteed returns. Trading in the stock market involves risk. Please consult your financial advisor before making any investment decisions.
@@ -243,6 +244,17 @@ src="https://www.facebook.com/tr?id=1031170686369850&ev=PageView&noscript=1"
             This Channel Advertise By <a href="https://t.me/+JP96Y2n0U8xiZWI1" target="_blank">Digital ads Experts ↗</a>
         </div>
     </div>
+
+    <!-- Meta Pixel Tracking Script for Button Click -->
+    <script>
+        document.getElementById('telegramBtn').addEventListener('click', function() {
+            if (typeof fbq !== 'undefined') {
+                // Tracks 'Subscribe' and 'Lead' event on click
+                fbq('track', 'Subscribe');
+                fbq('track', 'Lead');
+            }
+        });
+    </script>
 
 </body>
 </html>
